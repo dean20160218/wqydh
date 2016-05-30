@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>找回密码</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <style>
+        .main-container{
+            margin:10px auto;
+            height: 800px;
+        }
+        @media screen and (min-width: 1000px) {
+            .main-container {
+                width: 55%;
+            }
+        }
+        @media screen and (min-width: 1000px) and (max-width: 1300px) {
+            .main-container {
+                width: 80%;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .main-container,{
+                width: 100%;
+            }
+        }
+        li{
+            list-style-type: none;
+            line-height: 37px;
+            vertical-align: middle;
+        }
+        span{
+            text-align: center;
+            line-height: 100%;
+        }
+        .myfooter{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-top: 50px;
+            color: #767676;
+            text-align: center;
+            border-top:1px solid #e5e5e5;
+        }
+    </style>
+</head>
+<body>
+<p><h3 style="text-align: center;color: #255625">企业找回密码</h3></p>
+<div class="main-container">
+    <button class="btn btn-primary form-control" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">下载介绍信</button>
+    <div class="collapse" id="collapseExample1">
+        <div class="well">
+            <div class="download">
+                <br/>
+                <form action="">
+                    <ul>
+                        <li class="row">
+                            <div class="col-md-2"><span>填写企业全称：</span></div>
+                            <div class="col-md-8"><input type="text" class="form-control"/></div>
+                            <div class="col-md-2"><button class="btn btn-success">查找企业</button></div>
+                        </li>
+                        <li class="row">
+                            <div class="col-md-2"><span>报名联系人姓名：</span></div>
+                            <div class="col-md-8"><input type="text" class="form-control"/></div>
+                        </li>
+                        <li class="row">
+                            <div class="col-md-2"><span>报名联系人部门：</span></div>
+                            <div class="col-md-8"><input type="text" class="form-control"/></div>
+                        </li>
+                        <li class="row">
+                            <div class="col-md-2"><span>报名联系人职务：</span></div>
+                            <div class="col-md-8"><input type="text" class="form-control"/></div>
+                        </li>
+                        <li class="row">
+                            <div class="col-md-2"><span>报名联系人座机：</span></div>
+                            <div class="col-md-8"><input type="text" class="form-control"/></div>
+                            <div class="col-md-2"><button class="btn btn-success">校验手机</button></div>
+                        </li>
+                        <li class="row">
+                            <div class="col-md-2"><span>报名联系人手机：</span></div>
+                            <div class="col-md-8"><input type="text" class="form-control"/></div>
+                        </li>
+                        <li class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8"><button class="btn btn-success" style="width:100%;">下载介绍信</button></div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary form-control" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">上传介绍信</button>
+    <div class="collapse" id="collapseExample2">
+        <div class="well">
+            <hr/>
+            <div class="upload">
+                <p><h3 style="text-align: center;">介绍信需要加盖公章，然后上传清晰有效的照片或扫描件:<a href="">查看样例</a></h3></p>
+                <br/>
+                <p><div style="margin:0 auto;width: 200px;text-align: center;"><input type="file" style="font-size: 18px;"/></div></p>
+                <br/>
+                <ul>
+                    <li class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8"><button id="btn-submit" class="btn btn-success" style="width: 100%;">提交审核</button></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="myfooter">
+        <p>苏州市体育竞赛管理中心（苏州市社会体育管理中心）   版权所有(C)    本站内容未经许可不得转载</p>
+    </div>
+</div>
+<div style="text-align: center;display: none;" id="state">
+    <p><h3>审核已经提交，请等待竞管中心审核.</h3></p>
+    <p><h3>竞管中心联系电话：0512-66668888   </h3></p>
+    <div class="myfooter">
+        <p>苏州市体育竞赛管理中心（苏州市社会体育管理中心）   版权所有(C)    本站内容未经许可不得转载</p>
+    </div>
+</div>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $("#btn-submit").click(function () {
+        $(".main-container").hide();
+        $("#state").show();
+    })
+</script>
+</html>

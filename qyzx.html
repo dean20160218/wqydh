@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>企业管理中心</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <style>
+        /*.myheading{
+            background-color: #333;
+        }*/
+        .myfooter{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-top: 50px;
+            color: #767676;
+            text-align: center;
+            border-top:1px solid #e5e5e5;
+        }
+        li{
+            list-style-type: none;
+            line-height: 40px;
+        }
+        .modify li{
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="myheading">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img src="img/logo.png" alt="..." style="width: 75px;height: 30px;"/>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">会员管理</a></li>
+                    <li><a href="#">内容管理</a></li>
+                    <li><a href="#">系统分析</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle"data-toggle="dropdown" role="button"aria-expanded="false">
+                            系统维护<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">恢复系统</a></li>
+                            <li><a href="#">系统备份</a></li>
+                            <li><a href="#">删除用户</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-default navbar-btn navbar-right">登陆</button>
+                <form action=""class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容"/>
+                    </div>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>-->
+<div style="text-align: center">
+    <p><h3>外企运动会--企业管理中心</h3></p>
+</div>
+<div class="mybody container" style="margin-top: 50px">
+    <div class="row">
+        <div class="left-menu col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item active">操作类别</a>
+                <a href="#" class="list-group-item" onclick="change('modify')">信息修改</a>
+                <a href="#" class="list-group-item" onclick="change('sign')">项目报名</a>
+                <a href="#" class="list-group-item" onclick="change('manage')">报名管理</a>
+            </div>
+        </div>
+        <div id="modify" class="content col-md-9">
+            <ol class="breadcrumb">
+                <li><a href="#">信息修改</a></li>
+            </ol>
+            <div>
+                <p style="text-align: center">
+                    企业信息验证不通过!
+                    原因：经查验，企业填写的注册所在地与工商注册信息不匹配！
+                    请在网上报名截止前修改并重新提交！
+                </p>
+                <ul>
+                    <li class="row">
+                        <div class="col-md-2">企业全称 <span style="color:red">*</span></div>
+                        <div class="col-md-10"><input type="text" class="form-control"/></div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">企业简称<span style="color:red">*</span></div>
+                        <div class="col-md-10"><input type="text" class="form-control"/></div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">注册所在地<span style="color:red">*</span></div>
+                        <div class="col-md-10">
+                            <select class="form-control">
+                                <option value="">姑苏区</option>
+                                <option value="">吴中区</option>
+                                <option value="">相城区</option>
+                                <option value="">工业园区</option>
+                                <option value="">高新区</option>
+                                <option value="">吴江区</option>
+                                <option value="">昆山市</option>
+                                <option value="">张家港市</option>
+                                <option value="">常熟市</option>
+                                <option value="">太仓市</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">通讯地址<span style="color:red">*</span></div>
+                        <div class="col-md-10">
+                            <select class="form-control">
+                                <option value="">姑苏区</option>
+                                <option value="">吴中区</option>
+                                <option value="">相城区</option>
+                                <option value="">工业园区</option>
+                                <option value="">高新区</option>
+                                <option value="">吴江区</option>
+                                <option value="">昆山市</option>
+                                <option value="">张家港市</option>
+                                <option value="">常熟市</option>
+                                <option value="">太仓市</option>
+                            </select>
+                            <textarea rows="5"  class="form-control"></textarea>
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">报名联系人 <span style="color:red">*</span></div>
+                        <div class="col-md-10"><input type="text" class="form-control"/></div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">手机号码 <span style="color:red">*</span></div>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control"/>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="form-control btn btn-primary">校验</button>
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">电子邮箱 <span style="color:red">*</span></div>
+                        <div class="col-md-10"><input type="text" class="form-control"/></div>
+                    </li>
+                   <li class="row">
+                        <div class="col-md-2">工商登记号/统一社会信用代码</div>
+                        <div class="col-md-10"><input type="text" class="form-control"/></div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">座机号码</div>
+                        <div class="col-md-10"><input type="text" class="form-control"/></div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">企业全称</div>
+                        <div class="col-md-10"><input type="text" class="form-control"/></div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">传真号码</div>
+                        <div class="col-md-10"><input type="text" class="form-control"/></div>
+                    </li>
+                    <li class="row">
+                       <div class="col-md-2">投资国别</div>
+                       <div class="col-md-10">
+                           <select class="form-control">
+                               <option>中国</option>
+                               <option>美国</option>
+                               <option>英国</option>
+                               <option>法国</option>
+                               <option>德国</option>
+                               <option>越南</option>
+                               <option>俄罗斯</option>
+                           </select>
+                       </div>
+                   </li>
+                    <li class="row">
+                        <div class="col-md-2">员工人数</div>
+                        <div class="col-md-10"><input type="text" class="form-control"/></div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">公司简介</div>
+                        <div class="col-md-10">
+                            <textarea rows="5" class="form-control"></textarea>
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">公司LOGO(建议CDR)</div>
+                        <div class="col-md-10"><input type="file" class="form-control"/></div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">公司外景照片</div>
+                        <div class="col-md-10"><input type="file" class="form-control"/></div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-2">公司官网</div>
+                        <div class="col-md-10"><input type="text" class="form-control"/></div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-success form-control">确认修改</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="sign" class="content col-md-9" style="display: none;">
+            <ol class="breadcrumb">
+                <li><a href="#">项目修改</a></li>
+            </ol>
+            <div class="table-responsive row">
+                <div class=" col-md-12 sign row" style="margin-top: 50px;">
+                    <div class="col-md-6"><button class="form-control btn-primary">下载报名表（模板）</button></div>
+                    <div class="col-md-6"><button class="form-control btn-primary">上传报名表</button></div>
+                </div>
+                <br/>
+                <br/>
+                <br/>  <br/>
+                <br/>
+                <br/>
+                <p>
+                    <span>操作步骤：</span>
+                <ul>
+                    <li>下载活动报名模板（EXCEL）</li>
+                    <li>在模板中填写活动报名信息</li>
+                    <li>上传已填写好活动报名信息</li>
+                </ul>
+                <span>注意事项：</span>
+                <ul>
+                    <li>不要改动模板结构</li>
+                    <li>在规定的位置填写</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+        <div id="manage" style="display: none" class="col-md-9">
+            <div class="row">
+                <div class="col-md-3">
+                    <span>运动员姓名</span>
+                    <input type="text" class="form-control"/>
+                </div>
+                <div class="col-md-3">
+                    <span>类型</span>
+                    <select class="form-control">
+                        <option>任意</option>
+                        <option>乒乓球</option>
+                        <option>篮球</option>
+                        <option>健身跑</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <span>社保审核状态</span>
+                    <select class="form-control">
+                        <option>全部</option>
+                        <option>待审核</option>
+                        <option>审核通过</option>
+                        <option>审核不通过</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button class="form-control btn btn-primary">筛选</button>
+                </div>
+            </div>
+           <div class="table-responsive">
+               <table class="table table-bordered table-hover">
+                   <thead>
+                   <tr>
+                       <th>运动员</th>
+                       <th>类型</th>
+                       <th>手机</th>
+                       <th>报名项目</th>
+                       <th>社保审核状态</th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   <tr>
+                       <td>李四</td>
+                       <td>正式员工</td>
+                       <td>13122870781</td>
+                       <td>乒乓球（男子单打、男子团体）</td>
+                       <td>审核通过</td>
+                   </tr>
+                   <tr>
+                       <td>李四</td>
+                       <td>正式员工</td>
+                       <td>13122870781</td>
+                       <td>乒乓球（男子单打、男子团体）</td>
+                       <td>审核通过</td>
+                   </tr>
+                   <tr>
+                       <td>李四</td>
+                       <td>正式员工</td>
+                       <td>13122870781</td>
+                       <td>乒乓球（男子单打、男子团体）</td>
+                       <td>审核通过</td>
+                   </tr>
+                   <tr>
+                       <td>李四</td>
+                       <td>正式员工</td>
+                       <td>13122870781</td>
+                       <td>乒乓球（男子单打、男子团体）</td>
+                       <td>审核通过</td>
+                   </tr>
+                   <tr>
+                       <td>李四</td>
+                       <td>正式员工</td>
+                       <td>13122870781</td>
+                       <td>乒乓球（男子单打、男子团体）</td>
+                       <td>审核通过</td>
+                   </tr>
+                   <tr>
+                       <td>李四</td>
+                       <td>正式员工</td>
+                       <td>13122870781</td>
+                       <td>乒乓球（男子单打、男子团体）</td>
+                       <td>审核通过</td>
+                   </tr>
+                   <tr>
+                       <td>李四</td>
+                       <td>正式员工</td>
+                       <td>13122870781</td>
+                       <td>乒乓球（男子单打、男子团体）</td>
+                       <td>审核通过</td>
+                   </tr>
+                   <tr>
+                       <td>李四</td>
+                       <td>正式员工</td>
+                       <td>13122870781</td>
+                       <td>乒乓球（男子单打、男子团体）</td>
+                       <td>审核通过</td>
+                   </tr>
+                   <tr>
+                       <td>李四</td>
+                       <td>正式员工</td>
+                       <td>13122870781</td>
+                       <td>乒乓球（男子单打、男子团体）</td>
+                       <td>审核通过</td>
+                   </tr>
+                   </tbody>
+               </table>
+           </div>
+            <nav style="text-align: center">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <li><div><button class="btn btn-primary form-control">预览报名表</button></div></li>
+                <li><div><button class="btn btn-primary form-control">正式导出报名表</button></div></li>
+            </div>
+        </div>
+    </div>
+    <div class="myfooter">
+        <p>苏州市体育竞赛管理中心（苏州市社会体育管理中心）   版权所有(C)    本站内容未经许可不得转载</p>
+    </div>
+</div>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    function change(str){
+        if(str=="modify"){
+            $("#modify").show();
+            $("#sign").hide();
+            $("#manage").hide();
+        }else if(str=="sign"){
+            $("#sign").show();
+            $("#modify").hide();
+            $("#manage").hide();
+        }else if(str=="manage"){
+            $("#manage").show();
+            $("#modify").hide();
+            $("#sign").hide();
+        }
+    }
+</script>
+<script>
+    $(".navbar-nav a").click(function (e) {
+        $(this).tab("show");
+    })
+</script>
+</body>
+</html>

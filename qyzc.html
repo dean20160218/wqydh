@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>企业</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <style>
+        .main-container{
+            margin:20px auto;
+            height: 800px;
+        }
+        .btn-sub{
+            width: 100%;
+        }
+        @media screen and (min-width: 1000px) {
+            .main-container {
+                width: 55%;
+            }
+        }
+        @media screen and (min-width: 1000px) and (max-width: 1300px) {
+            .main-container {
+                width: 80%;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .main-container,{
+                width: 100%;
+            }
+        }
+        li{
+            list-style-type: none;
+            line-height: 37px;
+            vertical-align: middle;
+        }
+        span{
+            text-align: center;
+            line-height: 100%;
+        }
+        .myfooter{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-top: 50px;
+            color: #767676;
+            text-align: center;
+            border-top:1px solid #e5e5e5;
+        }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <p><h3 style="text-align: center;">企业注册</h3></p>
+    <br/>
+    <form action="">
+        <ul>
+            <li class="row">
+                <div class="col-md-2"><span>企业全称</span><span style="color: red">*</span></div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control"/>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="form-control btn-success">验证</button>
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>企业简称（至多6位）</span><span style="color: red">*</span></div>
+                <div class="col-md-8"> <input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>注册所在地</span><span style="color: red">*</span></div>
+                <div class="col-md-8">
+                    <select class="form-control">
+                        <option value="">姑苏区</option>
+                        <option value="">吴中区</option>
+                        <option value="">相城区</option>
+                        <option value="">工业园区</option>
+                        <option value="">高新区</option>
+                        <option value="">吴江区</option>
+                        <option value="">昆山市</option>
+                        <option value="">张家港市</option>
+                        <option value="">常熟市</option>
+                        <option value="">太仓市</option>
+                    </select>
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>通讯地址</span><span style="color: red">*</span></div>
+                <div class="col-md-8">
+                    <select class="form-control">
+                        <option value="">姑苏区</option>
+                        <option value="">吴中区</option>
+                        <option value="">相城区</option>
+                        <option value="">工业园区</option>
+                        <option value="">高新区</option>
+                        <option value="">吴江区</option>
+                        <option value="">昆山市</option>
+                        <option value="">张家港市</option>
+                        <option value="">常熟市</option>
+                        <option value="">太仓市</option>
+                    </select>
+                    <textarea placeholder="输入详细地址" class="form-control"></textarea>
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>登录密码(至少6位)</span><span style="color: red">*</span></div>
+                <div class="col-md-8"><input type="password" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>确认密码</span><span style="color: red">*</span></div>
+                <div class="col-md-8"><input type="password" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>报名联系人</span><span style="color: red">*</span></div>
+                <div class="col-md-8"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>手机号码</span><span style="color: red">*</span></div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control"/>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="form-control btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">验证</button>
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>电子邮箱</span><span style="color: red">*</span></div>
+                <div class="col-md-8"><input type="email" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>工商登记号/统一社会信息代码</span></div>
+                <div class="col-md-8"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>座机号码</span></div>
+                <div class="col-md-8"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>传真号码</span></div>
+                <div class="col-md-8"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>投资国别</span></div>
+                <div class="col-md-8">
+                    <select class="form-control">
+                        <option>中国</option>
+                        <option>美国</option>
+                        <option>英国</option>
+                        <option>法国</option>
+                        <option>德国</option>
+                        <option>越南</option>
+                        <option>俄罗斯</option>
+                    </select>
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"><span>员工人数</span></div>
+                <div class="col-md-8"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <input type="checkbox"/><a href="bmxz.html">我已经阅读报名须知</a>
+                </div>
+            </li>
+            <li class="row">
+                <br/>
+                <div class="col-md-2"></div>
+                <div class="col-md-8"><button class="btn-sub btn-success form-control" style="width: 100%">确定注册</button></div>
+            </li>
+            <h4 style="text-align: left">其中加<span style="color: red">*</span>为必填</h4>
+        </ul>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">手机验证码已发送</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">请输入手机验证码:</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">验证</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="myfooter">
+        <p>苏州市体育竞赛管理中心（苏州市社会体育管理中心）   版权所有(C)    本站内容未经许可不得转载</p>
+    </div>
+</div>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>
