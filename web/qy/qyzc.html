@@ -165,7 +165,7 @@
             <li class="row">
                 <br/>
                 <div class="col-md-2"></div>
-                <div class="col-md-8"><button class="btn-sub btn-success form-control" style="width: 100%">确定注册</button></div>
+                <div class="col-md-8"><button class="btn-sub btn-success form-control" id="btn-submit" style="width: 100%">确定注册</button></div>
             </li>
             <h4 style="text-align: left">其中加<span style="color: red">*</span>为必填</h4>
         </ul>
@@ -197,6 +197,35 @@
     </div>
 </div>
 </body>
-<script src="js/jquery-2.2.4.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../../js/jquery-2.2.4.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script>
+    $("#btn-submit").click(function(){
+        $.ajax({
+            url:'http://61.174.40.245:16446/company_signup',
+            type:'post',
+            data:{
+                'full_name':'园区测绘公司',
+                'short_name':'测绘',
+                'register_address':'苏虹中路101号',
+                'address':'尼玛路888号',
+                'password':'145632',
+                'contact_person':'王小虎',
+                'phone_number':'13122870781',
+                'email':'8888@88.com',
+                'bussiness_register_mark':'',
+                'landline_number':'55688',
+                'fax_number':'05128888888',
+                'invest_country':'毛里求斯',
+                'staff_count':'13'
+            },
+            success:function(data){
+                alert(data);
+            },
+            error:function(){
+                alert("error");
+            }
+        })
+    })
+</script>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script>
+    $.ajax({
+        url:'http://61.174.40.245:16446/company_signup',
+        type:'post',
+        data:{
+            'full_name':'园区测绘公司',
+            'short_name':'测绘',
+            'register_address':'苏虹中路101号',
+            'address':'尼玛路888号',
+            'password':'145632',
+            'contact_person':'王小虎',
+            'phone_number':'13122870781',
+            'email':'8888@88.com',
+            'bussiness_register_mark':'',
+            'landline_number':'55688',
+            'fax_number':'05128888888',
+            'invest_country':'毛里求斯',
+            'staff_count':'13'
+        },
+        success:function(data){
+            alert(data);
+        },
+        error:function(){
+            alert("error");
+        }
+    })
+</script>
+</body>
+</html>
+<!--full_name 字符型
+short_name 字符型
+register_address 字符型
+address 字符型
+password 字符型
+contact_person 字符型
+phone_number 数字
+email 字符型
+bussiness_register_mark 字符型
+landline_number 数字
+fax_number 数字
+invest_country 字符型-->
