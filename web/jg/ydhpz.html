@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运动会配置</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <style>
+        body{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="peizhi">
+    <!--篮球-->
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-basketball" aria-expanded="false" aria-controls="collapse-basketball">篮球</button>
+    <div class="collapse" id="collapse-basketball">
+        <div class="well">
+            <!--篮球-->
+            <div id="basketball">
+                <input type="checkbox"/><span>篮球</span>
+                <span>起止时间：</span>
+                <input type="text"/>--<input type="text"/>
+                <button onclick="add('basketball')">添加子项</button>
+                <button data-toggle="modal" data-target="#myModal-basketball" onclick="mutex('basketball')">添加互斥</button>
+                <span><input type="file"/>配置LOGO</span>
+                <table id="basketball-table" class="table">
+                    <tr>
+                        <th>小项</th>
+                        <th>限制报名总数-最少</th>
+                        <th>限制报名总数-最多</th>
+                        <th>限制企业报名数-最少</th>
+                        <th>限制企业报名数-最多</th>
+                        <th>性别人数限制-男</th>
+                        <th>性别人数限制-女</th>
+                        <th>报名费用</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+                <span>互斥信息展示：</span>
+                <div id="mutex-display-basketball"></div>
+            </div>
+            <!--添加注册模态框-->
+            <div class="modal fade" id="myModal-basketball" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">添加互斥</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="mutex-detail-basketball">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="modalSave('basketball')">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--足球-->
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-football" aria-expanded="false" aria-controls="collapse-football">足球</button>
+    <div class="collapse" id="collapse-football">
+        <div class="well">
+            <!--足球-->
+            <div id="football">
+                <input type="checkbox"/><span>足球</span>
+                <span>起止时间：</span>
+                <input type="text"/>--<input type="text"/>
+                <button onclick="add('football')">添加子项</button>
+                <button>添加互斥</button>
+                <span><input type="file"/>配置LOGO</span>
+                <table id="football-table" class="table">
+                    <tr>
+                        <th>小项</th>
+                        <th>限制报名总数-最少</th>
+                        <th>限制报名总数-最多</th>
+                        <th>限制企业报名数-最少</th>
+                        <th>限制企业报名数-最多</th>
+                        <th>性别人数限制-男</th>
+                        <th>性别人数限制-女</th>
+                        <th>报名费用</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--乒乓球-->
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-table-tennis" aria-expanded="false" aria-controls="collapse-table-tennis">乒乓球</button>
+    <div class="collapse" id="collapse-table-tennis">
+        <div class="well">
+            <!--乒乓球-->
+            <div id="table-tennis">
+                <input type="checkbox"/><span>乒乓球</span>
+                <span>起止时间：</span>
+                <input type="text"/>--<input type="text"/>
+                <button onclick="add('table-tennis')">添加子项</button>
+                <button>添加互斥</button>
+                <span><input type="file"/>配置LOGO</span>
+                <table id="table-tennis-table" class="table">
+                    <tr>
+                        <th>小项</th>
+                        <th>限制报名总数-最少</th>
+                        <th>限制报名总数-最多</th>
+                        <th>限制企业报名数-最少</th>
+                        <th>限制企业报名数-最多</th>
+                        <th>性别人数限制-男</th>
+                        <th>性别人数限制-女</th>
+                        <th>报名费用</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--羽毛球-->
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-badminton" aria-expanded="false" aria-controls="collapse-badminton">羽毛球</button>
+    <div class="collapse" id="collapse-badminton">
+        <div class="well">
+            <!--羽毛球-->
+            <div id="badminton">
+                <input type="checkbox"/><span>羽毛球</span>
+                <span>起止时间：</span>
+                <input type="text"/>--<input type="text"/>
+                <button onclick="add('badminton')">添加子项</button>
+                <button>添加互斥</button>
+                <span><input type="file"/>配置LOGO</span>
+                <table id="badminton-table" class="table">
+                    <tr>
+                        <th>小项</th>
+                        <th>限制报名总数-最少</th>
+                        <th>限制报名总数-最多</th>
+                        <th>限制企业报名数-最少</th>
+                        <th>限制企业报名数-最多</th>
+                        <th>性别人数限制-男</th>
+                        <th>性别人数限制-女</th>
+                        <th>报名费用</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--保龄球-->
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-bowling" aria-expanded="false" aria-controls="collapse-bowling">保龄球</button>
+    <div class="collapse" id="collapse-bowling">
+        <div class="well">
+            <!--保龄球-->
+            <div id="bowling">
+                <input type="checkbox"/><span>保龄球</span>
+                <span>起止时间：</span>
+                <input type="text"/>--<input type="text"/>
+                <button onclick="add('bowling')">添加子项</button>
+                <button>添加互斥</button>
+                <span><input type="file"/>配置LOGO</span>
+                <table id="bowling-table" class="table">
+                    <tr>
+                        <th>小项</th>
+                        <th>限制报名总数-最少</th>
+                        <th>限制报名总数-最多</th>
+                        <th>限制企业报名数-最少</th>
+                        <th>限制企业报名数-最多</th>
+                        <th>性别人数限制-男</th>
+                        <th>性别人数限制-女</th>
+                        <th>报名费用</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--钓鱼-->
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-fishing" aria-expanded="false" aria-controls="collapse-fishing">钓鱼</button>
+    <div class="collapse" id="collapse-fishing">
+        <div class="well">
+            <!--钓鱼-->
+            <div id="fishing">
+                <input type="checkbox"/><span>钓鱼</span>
+                <span>起止时间：</span>
+                <input type="text"/>--<input type="text"/>
+                <button onclick="add('fishing')">添加子项</button>
+                <button>添加互斥</button>
+                <span><input type="file"/>配置LOGO</span>
+                <table id="fishing-table" class="table">
+                    <tr>
+                        <th>小项</th>
+                        <th>限制报名总数-最少</th>
+                        <th>限制报名总数-最多</th>
+                        <th>限制企业报名数-最少</th>
+                        <th>限制企业报名数-最多</th>
+                        <th>性别人数限制-男</th>
+                        <th>性别人数限制-女</th>
+                        <th>报名费用</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--台球-->
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-billiards" aria-expanded="false" aria-controls="collapse-billiards">台球</button>
+    <div class="collapse" id="collapse-billiards">
+        <div class="well">
+            <!--台球-->
+            <div id="billiards">
+                <input type="checkbox"/><span>台球</span>
+                <span>起止时间：</span>
+                <input type="text"/>--<input type="text"/>
+                <button onclick="add('billiards')">添加子项</button>
+                <button>添加互斥</button>
+                <span><input type="file"/>配置LOGO</span>
+                <table id="billiards-table" class="table">
+                    <tr>
+                        <th>小项</th>
+                        <th>限制报名总数-最少</th>
+                        <th>限制报名总数-最多</th>
+                        <th>限制企业报名数-最少</th>
+                        <th>限制企业报名数-最多</th>
+                        <th>性别人数限制-男</th>
+                        <th>性别人数限制-女</th>
+                        <th>报名费用</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--高尔夫-->
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-golf" aria-expanded="false" aria-controls="collapse-golf">高尔夫</button>
+    <div class="collapse" id="collapse-golf">
+        <div class="well">
+            <!--高尔夫-->
+            <div id="golf">
+                <input type="checkbox"/><span>高尔夫</span>
+                <span>起止时间：</span>
+                <input type="text"/>--<input type="text"/>
+                <button onclick="add('golf')">添加子项</button>
+                <button>添加互斥</button>
+                <span><input type="file"/>配置LOGO</span>
+                <table id="golf-table" class="table">
+                    <tr>
+                        <th>小项</th>
+                        <th>限制报名总数-最少</th>
+                        <th>限制报名总数-最多</th>
+                        <th>限制企业报名数-最少</th>
+                        <th>限制企业报名数-最多</th>
+                        <th>性别人数限制-男</th>
+                        <th>性别人数限制-女</th>
+                        <th>报名费用</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--游泳-->
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-swimming" aria-expanded="false" aria-controls="collapse-swimming">游泳</button>
+    <div class="collapse" id="collapse-swimming">
+        <div class="well">
+            <!--游泳-->
+            <div id="swimming">
+                <input type="checkbox"/><span>游泳</span>
+                <span>起止时间：</span>
+                <input type="text"/>--<input type="text"/>
+                <button onclick="add('swimming')">添加子项</button>
+                <button>添加互斥</button>
+                <span><input type="file"/>配置LOGO</span>
+                <table id="swimming-table" class="table">
+                    <tr>
+                        <th>小项</th>
+                        <th>限制报名总数-最少</th>
+                        <th>限制报名总数-最多</th>
+                        <th>限制企业报名数-最少</th>
+                        <th>限制企业报名数-最多</th>
+                        <th>性别人数限制-男</th>
+                        <th>性别人数限制-女</th>
+                        <th>报名费用</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--攀岩-->
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse-climb" aria-expanded="false" aria-controls="collapse-climb">攀岩</button>
+    <div class="collapse" id="collapse-climb">
+        <div class="well">
+            <!--攀岩-->
+            <div id="climb">
+                <input type="checkbox"/><span>攀岩</span>
+                <span>起止时间：</span>
+                <input type="text"/>--<input type="text"/>
+                <button onclick="add('climb')">添加子项</button>
+                <button>添加互斥</button>
+                <span><input type="file"/>配置LOGO</span>
+                <table id="climb-table" class="table">
+                    <tr>
+                        <th>小项</th>
+                        <th>限制报名总数-最少</th>
+                        <th>限制报名总数-最多</th>
+                        <th>限制企业报名数-最少</th>
+                        <th>限制企业报名数-最多</th>
+                        <th>性别人数限制-男</th>
+                        <th>性别人数限制-女</th>
+                        <th>报名费用</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-2.2.4.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script>
+    //增加;
+    var a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,i=0,j= 0,k=0;
+    function add(str){
+        if(str=="basketball"){
+            a++;
+            k=a;
+        }else if(str=="football"){
+            b++;
+            k=b;
+        }else if(str=="table-tennis"){
+            c++;
+            k=c;
+        }else if(str=="badminton"){
+            d++;
+            k=d;
+        }else if(str=="bowling"){
+            e++;
+            k=e;
+        }else if(str=="fishing"){
+            f++;
+            k=f;
+        }else if(str=="billiards"){
+            g++;
+            k=g;
+        }else if(str=="golf"){
+            h++;
+            k=h;
+        }else if(str=="swimming"){
+            i++;
+            k=i;
+        }else{
+            j++;
+            k=j;
+        }
+        //for append;
+        var appendStr=str+"-table";
+        var tdStr=str+"-td"+k;
+        $("#"+appendStr).append("<tr id='"+tdStr+"'>" +
+                "<td><input type='text' value='男子组' id='"+str+k+"'/></td>" +
+                "<td><input type='text' value='10'/></td>" +
+                "<td><input type='text' value='15'/></td>" +
+                "<td><input type='text' value='5'/></td>" +
+                "<td><input type='text' value='8'/></td>" +
+                "<td><input type='text' value='所有'/></td>" +
+                "<td><input type='text' value='0'/></td>" +
+                "<td><input type='text' value='30'/>" +
+                "<select>" +
+                "<option>元/人</option>" +
+                "<option>元/队</option>" +
+                "</select>" +
+                "</td>" +
+                "<td>" +
+                "<button onclick='del("+'"'+tdStr+'"'+","+'"'+str+'"'+")'>删除</button>" +
+                "</td>" +
+                "</tr>")
+    }
+    //删除;
+    function del(str1,str2){
+        $("#"+str1).remove();
+        $("#mutex-display-"+str2).empty();
+    }
+    //点击入口处理互斥
+    function mutex(str){
+        if(str=="basketball" && a!=0){
+            addMutex(str,backArray(str,a));
+        }else if(str=="football" && b!=0){
+            addMutex(str,backArray(str,b));
+        }else if(str=="table-tennis" && c!=0){
+            addMutex(str,backArray(str,c));
+        }else if(str=="badminton" && d!=0){
+            addMutex(str,backArray(str,d));
+        }else if(str=="bowling" && e!=0){
+            addMutex(str,backArray(str,e));
+        }else if(str=="fishing" && f!=0){
+            addMutex(str,backArray(str,f));
+        }else if(str=="billiards" && g!=0){
+            addMutex(str,backArray(str,g));
+        }else if(str=="golf" && h!=0){
+            addMutex(str,backArray(str,h));
+        }else if(str=="swimming" && i!=0 ){
+            addMutex(str,backArray(str,i));
+        }else{
+            addMutex(str,backArray(str,j));
+        }
+    }
+    //使用动态数组存取获取到的子类别的名称;
+    function backArray(str,param){
+        var array=[];
+        for(var l=1;l<=param;l++){
+            var nameId=str+l;
+            var nameValue=$("#"+nameId).val();
+            if(nameValue!=undefined &&nameValue!=null){
+                array.push(nameValue);
+            }
+        }
+        return array;
+    }
+    //向页面中添加互斥的内容列表;
+    function addMutex(str,array){
+        var addDivId="mutex-detail-"+str;
+        var selectId="mutex-select-"+str;
+        var optionStr="";
+        for(var m=0;m<array.length;m++){
+            optionStr +="<option>"+array[m]+"</option>"
+        }
+        $("#"+addDivId).empty();
+        $("#"+addDivId).append("<select id='"+selectId+1+"'>"+optionStr+"</select>与")
+        $("#"+addDivId).append("<select id='"+selectId+2+"'>"+optionStr+"</select>互斥")
+//        $("#mutex-detail-basketball").append("<p>666</p>");
+    }
+    //处理互斥确定显示
+    function modalSave(str){
+        $("#mutex-display-"+str).empty();//如果清除;
+        var leftValue=$("#mutex-select-"+str+1+" option:selected").text();
+        var rightValue=$("#mutex-select-"+str+2 +" option:selected").text();
+        $("#mutex-display-"+str).append("<span>"+leftValue+"</span><span>与</span><span>"+rightValue+"</span><span>互斥</span>")
+    }
+</script>
+</html>

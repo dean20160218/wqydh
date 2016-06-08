@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>企业资料</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <style>
+        li{
+            list-style-type: none;
+            line-height: 40px;
+        }
+        .modify li{
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+<div id="modify" class="content col-md-9">
+    <ol class="breadcrumb">
+        <li><a href="#">信息修改</a></li>
+    </ol>
+    <div>
+        <p style="text-align: center">
+            企业信息验证不通过!
+            原因：经查验，企业填写的注册所在地与工商注册信息不匹配！
+            请在网上报名截止前修改并重新提交！
+        </p>
+        <ul>
+            <li class="row">
+                <div class="col-md-2">企业全称 <span style="color:red">*</span></div>
+                <div class="col-md-10"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">企业简称<span style="color:red">*</span></div>
+                <div class="col-md-10"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">注册所在地<span style="color:red">*</span></div>
+                <div class="col-md-10">
+                    <select class="form-control">
+                        <option value="">姑苏区</option>
+                        <option value="">吴中区</option>
+                        <option value="">相城区</option>
+                        <option value="">工业园区</option>
+                        <option value="">高新区</option>
+                        <option value="">吴江区</option>
+                        <option value="">昆山市</option>
+                        <option value="">张家港市</option>
+                        <option value="">常熟市</option>
+                        <option value="">太仓市</option>
+                    </select>
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">通讯地址<span style="color:red">*</span></div>
+                <div class="col-md-10">
+                    <select class="form-control">
+                        <option value="">姑苏区</option>
+                        <option value="">吴中区</option>
+                        <option value="">相城区</option>
+                        <option value="">工业园区</option>
+                        <option value="">高新区</option>
+                        <option value="">吴江区</option>
+                        <option value="">昆山市</option>
+                        <option value="">张家港市</option>
+                        <option value="">常熟市</option>
+                        <option value="">太仓市</option>
+                    </select>
+                    <textarea rows="5"  class="form-control"></textarea>
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">报名联系人 <span style="color:red">*</span></div>
+                <div class="col-md-10"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">手机号码 <span style="color:red">*</span></div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control"/>
+                </div>
+                <div class="col-md-2">
+                    <button class="form-control btn btn-primary">校验</button>
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">电子邮箱 <span style="color:red">*</span></div>
+                <div class="col-md-10"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">工商登记号/统一社会信用代码</div>
+                <div class="col-md-10"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">座机号码</div>
+                <div class="col-md-10"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">企业全称</div>
+                <div class="col-md-10"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">传真号码</div>
+                <div class="col-md-10"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">投资国别</div>
+                <div class="col-md-10">
+                    <select class="form-control">
+                        <option>中国</option>
+                        <option>美国</option>
+                        <option>英国</option>
+                        <option>法国</option>
+                        <option>德国</option>
+                        <option>越南</option>
+                        <option>俄罗斯</option>
+                    </select>
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">员工人数</div>
+                <div class="col-md-10"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">公司简介</div>
+                <div class="col-md-10">
+                    <textarea rows="5" class="form-control"></textarea>
+                </div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">公司LOGO(建议CDR)</div>
+                <div class="col-md-10"><input type="file" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">公司外景照片</div>
+                <div class="col-md-10"><input type="file" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-2">公司官网</div>
+                <div class="col-md-10"><input type="text" class="form-control"/></div>
+            </li>
+            <li class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-success form-control">确认修改</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-2.2.4.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+</html>

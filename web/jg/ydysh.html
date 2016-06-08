@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运动员审核</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <style>
+        body{
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div>
+        <p>导入和导出</p>
+        <button>导出(下载)社保资格审查表</button>
+        <button>导入（上传）社保验证结果</button>
+    </div>
+
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">正式员工</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">劳务派遣员工</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+            <div>
+                企业全称：<input type="text"/>
+                注册所在地：
+                <select>
+                    <option>不限</option>
+                    <option>姑苏区</option>
+                    <option>吴中区</option>
+                    <option>相城区</option>
+                    <option>工业园区</option>
+                    <option>高新区</option>
+                    <option>吴江区</option>
+                    <option>昆山市</option>
+                    <option>张家港市</option>
+                    <option>常熟市</option>
+                    <option>太仓市</option>
+                </select>
+                报名项目：
+                <select>
+                    <option>全部</option>
+                    <option>保龄球</option>
+                    <option>拔河</option>
+                    <option>篮球</option>
+                    <option>乒乓球</option>
+                    <option>台球</option>
+                    <option>游泳</option>
+                    <option>羽毛球</option>
+                    <option>足球</option>
+                    <option>高尔夫球</option>
+                    <option>扑克牌“80 分”</option>
+                    <option>围棋</option>
+                    <option>攀岩</option>
+                    <option>健身跑</option>
+                </select>
+                审核状态：
+                <select>
+                    <option>全部</option>
+                    <option>待审核</option>
+                    <option>审核通过</option>
+                    <option>审核不通过</option>
+                </select>
+                <div class="">
+                    <span>正式员工</span>
+                    <table class="table">
+                        <tr>
+                            <th>审核</th>
+                            <th>审核状态</th>
+                            <th>员工姓名</th>
+                            <th>企业全称</th>
+                            <th>注册所在地</th>
+                            <th>身份证号码/护照号/台胞证号</th>
+                        </tr>
+                        <tr>
+                            <td><button>查看</button></td>
+                            <td>待审核</td>
+                            <td>张三</td>
+                            <td>苏州格网信息科技有限公司</td>
+                            <td>工业园区</td>
+                            <td>32502123456789012</td>
+                        </tr>
+                        <tr>
+                            <td><button>查看</button></td>
+                            <td>待审核</td>
+                            <td>张三</td>
+                            <td>苏州格网信息科技有限公司</td>
+                            <td>工业园区</td>
+                            <td>32502123456789012</td>
+                        </tr>
+                    </table>
+                    <div style="text-align: center">
+                        <span>记录：共18条 页次：2/2页 首页 上一页 下一页 尾页</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+            <div class="">
+                企业全称：<input type="text"/>
+                报名项目：
+                <select>
+                    <option>全部</option>
+                    <option>保龄球</option>
+                    <option>拔河</option>
+                    <option>篮球</option>
+                    <option>乒乓球</option>
+                    <option>台球</option>
+                    <option>游泳</option>
+                    <option>羽毛球</option>
+                    <option>足球</option>
+                    <option>高尔夫球</option>
+                    <option>扑克牌“80分”</option>
+                    <option>围棋</option>
+                    <option>攀岩</option>
+                    <option>健身跑</option>
+                </select>
+                审核状态：
+                <select>
+                    <option>全部</option>
+                    <option>待审核</option>
+                    <option>审核通过</option>
+                    <option>审核不通过</option>
+                </select>
+                <button>筛选</button>
+                <div class="">
+                    <span>劳务派遣员工</span>
+                    <table class="table">
+                        <tr>
+                            <th>审核</th>
+                            <th>审核状态</th>
+                            <th>员工姓名</th>
+                            <th>企业全称</th>
+                            <th>身份证号/护照号/台胞证号</th>
+                            <th>劳务派遣合同</th>
+                        </tr>
+                        <tr>
+                            <td><button>查看</button></td>
+                            <td>待审核</td>
+                            <td>王五</td>
+                            <td>苏州工业园区格网科技有限公司</td>
+                            <td>320502123456789012</td>
+                            <td>已上传</td>
+                        </tr>
+                    </table>
+                    <div style="text-align: center">
+                        <span>记录：共18条 页次：2/2页 首页 上一页 下一页 尾页</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-2.2.4.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+</html>

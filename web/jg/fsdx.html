@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发送短信</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+</head>
+<body>
+<!--发送短信-->
+<div class="col-md-9"  id="send-msg">
+    <div>发送短信</div>
+    <span>发送对象</span>
+    <div class="row">
+        <div class="col-md-4">选择方式</div>
+        <div class="col-md-8">
+            <input type="radio" name="method"  />按企业
+            <input type="radio" name="method"/>按项目
+            <input type="radio" name="method"/>自定义
+        </div>
+    </div>
+    <ul class="dynamic">
+        <li class="row one">
+            <div class="col-md-4"><span>企业类型</span></div>
+            <div class="col-md-8">
+                <select class="form-control">
+                    <option>所有企业</option>
+                    <option>所有未报名企业</option>
+                    <option>所有已报名企业</option>
+                </select>
+            </div>
+            <div>*仅包括企业信息审核通过的</div>
+        </li>
+        <li class="row two" style="display:none;">
+            <div class="col-md-4"><span>报名项目</span></div>
+            <div class="col-md-8">
+                <select class="form-control">
+                    <option  value="任意项目">任意项目</option>
+                    <option  selected value="围棋-男子个人">围棋-男子个人</option>
+                    <option  value="围棋-女子个人">围棋-女子个人</option>
+                    <option  value="健身跑-男子组">健身跑-男子组</option>
+                    <option  value="健身跑-女子组">健身跑-女子组</option>
+                    <option  value="钓鱼-个人赛">钓鱼-个人赛</option>
+                    <option  value="高尔夫-个人（18洞）比杆赛">高尔夫-个人（18洞）比杆赛</option>
+                    <option  value="台球-斯诺克个人赛">台球-斯诺克个人赛</option>
+                    <option  value="台球-黑八个人赛">台球-黑八个人赛</option>
+                    <option  value="拔河-男女混合赛">拔河-男女混合赛</option>
+                    <option  value="攀岩-男子速度赛">攀岩-男子速度赛</option>
+                    <option  value="攀岩-女子速度赛">攀岩-女子速度赛</option>
+                    <option  value="攀岩-男子难度赛">攀岩-男子难度赛</option>
+                    <option  value="攀岩-女子难度赛">攀岩-女子难度赛</option>
+                    <option  value="扑克牌“80分”">扑克牌“80分”</option>
+                    <option  value="篮球-男队">篮球-男队</option>
+                    <option  value="篮球-女队">篮球-女队</option>
+                    <option  value="乒乓球-男子单打">乒乓球-男子单打</option>
+                    <option  value="乒乓球-男子团打">乒乓球-男子团打</option>
+                    <option  value="乒乓球-女子单打">乒乓球-女子单打</option>
+                    <option  value="乒乓球-女子团打">乒乓球-女子团打</option>
+                    <option  value="游泳-男子50米自由泳">游泳-男子50米自由泳</option>
+                    <option  value="游泳-女子50米自由泳">游泳-女子50米自由泳</option>
+                    <option  value="游泳-男子50米蛙泳">游泳-男子50米蛙泳</option>
+                    <option  value="游泳-女子50米蛙泳">游泳-女子50米蛙泳</option>
+                    <option  value="羽毛球-男子单打">羽毛球-男子单打</option>
+                    <option  value="羽毛球-男子双打">羽毛球-男子双打</option>
+                    <option  value="羽毛球-男子团打">羽毛球-男子团打</option>
+                    <option  value="羽毛球-女子单打">羽毛球-女子单打</option>
+                    <option  value="羽毛球-女子团打">羽毛球-女子团打</option>
+                    <option  value="羽毛球-女子双打">羽毛球-女子双打</option>
+                    <option  value="足球-11人制足球(男队)">足球-11人制足球(男队)</option>
+                    <option  value="足球-11人制足球(女队)">足球-11人制足球(女队)</option>
+                    <option  value="足球-7人制足球(男队)">足球-7人制足球(男队)</option>
+                    <option  value="足球-7人制足球(女队)">足球-7人制足球(女队)</option>
+                    <option  value="中国象棋-男子个人">中国象棋-男子个人</option>
+                    <option  value="中国象棋-女子个人">中国象棋-女子个人</option>
+                    <option  value="保龄球-四人团体">保龄球-四人团体</option>
+                </select>
+            </div>
+        </li>
+        <li class="row three">
+            <div class="col-md-4"><span>角色</span></div>
+            <div class="col-md-8">
+                <select class="form-control">
+                    <option>报名联系人</option>
+                    <option>领队</option>
+                    <option>教练</option>
+                    <option>运动员</option>
+                </select>
+            </div>
+        </li>
+        <li class="row four" style="display: none">
+            <div class="col-md-4"><span>请输入手机号</span></div>
+            <div class="col-md-8"><input type="text" class="form-control"/></div>
+        </li>
+        <li class="row">
+            <button class="form-control btn btn-primary" data-toggle="modal" data-target="#myModal-see-detail">查看名单</button>
+        </li>
+        <!--查看详细信息的列表框-->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal-see-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel-see">选择发送对象</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>审核</th>
+                                <th>审核状态</th>
+                                <th>企业全称</th>
+                                <th>申请报名联系人</th>
+                                <th>申请时间</th>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"/></td>
+                                <td>1</td>
+                                <td>待审核</td>
+                                <td>苏州工业园区格网信息科技有限公司</td>
+                                <td>丁浩13122870781</td>
+                                <td>2016-06-02 15：45：25</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"/></td>
+                                <td>1</td>
+                                <td>已审核</td>
+                                <td>苏州工业园区格网信息科技有限公司</td>
+                                <td>丁浩13122870781</td>
+                                <td>2016-06-02 15：45：25</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"/></td>
+                                <td>1</td>
+                                <td>待审核</td>
+                                <td>苏州工业园区格网信息科技有限公司</td>
+                                <td>丁浩13122870781</td>
+                                <td>2016-06-02 15：45：25</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"/></td>
+                                <td>1</td>
+                                <td>待审核</td>
+                                <td>苏州工业园区格网信息科技有限公司</td>
+                                <td>丁浩13122870781</td>
+                                <td>2016-06-02 15：45：25</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"/></td>
+                                <td>1</td>
+                                <td>待审核</td>
+                                <td>苏州工业园区格网信息科技有限公司</td>
+                                <td>丁浩13122870781</td>
+                                <td>2016-06-02 15：45：25</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"/></td>
+                                <td>1</td>
+                                <td>待审核</td>
+                                <td>苏州工业园区格网信息科技有限公司</td>
+                                <td>丁浩13122870781</td>
+                                <td>2016-06-02 15：45：25</td>
+                            </tr>
+                        </table>
+                        <div style="text-align: center">
+                            <span>记录：共18条 页次：2/2页 首页 上一页 下一页 尾页</span>
+                        </div>
+                        <span>当前共选择5人</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ul>
+    <span>发送内容</span>
+    <hr/>
+    <div class="row">
+        <div class="col-md-2">
+            <span>前缀</span>
+        </div>
+        <div class="col-md-4">
+            <select class="form-control">
+                <option>无前缀</option>
+                <option>【外企运动会】</option>
+                <button >配置</button>
+            </select>
+        </div>
+        <div class="col-md-2"><button class="form-control">配置</button></div>
+    </div>
+    <div class="row">
+        <textarea cols="5" rows="5" class="form-control col-md-4"></textarea>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <span>后缀</span>
+        </div>
+        <div class="col-md-4">
+            <select class="form-control">
+                <option>如有疑问请致电65245183</option>
+                <option>如有疑问请致电65245183【苏州市体育竞赛管理中心】</option>
+                <option>无后缀</option>
+                <option>【苏州市体育竞赛管理中心】</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button class="form-control">配置</button>
+        </div>
+    </div>
+    <span>当前短信长度42字</span>
+    <button class="form-control btn btn-primary">确认发送</button>
+</div>
+</body>
+<script src="../../js/jquery-2.2.4.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+</html>

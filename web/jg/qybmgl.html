@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报名管理</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <style>
+        body{
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+企业简称：<input type="text"/>
+报名表：
+<select>
+    <option>不限</option>
+    <option>已交</option>
+    <option>未交</option>
+</select>
+报名费：
+<select>
+    <option>不限</option>
+    <option>已交</option>
+    <option>未交</option>
+</select>
+<button>筛选</button>
+<div>
+    <table class="table">
+        <tr>
+            <th>操作</th>
+            <th>企业简称</th>
+            <th>报名联系人</th>
+            <th>报名情况</th>
+            <th>运动员审核</th>
+            <th>报名表</th>
+            <th>报名费</th>
+            <th>变更权限</th>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">操作</button></td>
+            <td>格网</td>
+            <td>张三1312287081</td>
+            <td>2大项，8小项，18运动员</td>
+            <td>全部通过</td>
+            <td>已交</td>
+            <td>已交</td>
+            <td>未开启</td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">操作</button></td>
+            <td>格网</td>
+            <td>张三1312287081</td>
+            <td>2大项，8小项，18运动员</td>
+            <td>全部通过</td>
+            <td>已交</td>
+            <td>已交</td>
+            <td>未开启</td>
+        </tr>
+    </table>
+    <div style="text-align: center">
+        <span>记录：共18条 页次：2/2页 首页 上一页 下一页 尾页</span>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">企业报名情况</h4>
+                </div>
+                <div class="modal-body">
+                    <p>企业名称:苏州工业园区格网信息科技有限公司</p>
+                    <p>企业简称：格网科技</p>
+                    <p>报名联系人：丁浩/13122870781</p>
+                    <p>报名情况：2大项，8小项，18运动员</p>
+                    <button>查看</button>
+                    <p>运动员审核情况:全部通过</p>
+                    <button>运动员审核</button>
+                    <P>纸质报名表：共3张表</P>
+                    <button>已交</button>
+                    <p>报名费：650元</p>
+                    <button>未交</button>
+                    <p>附件</p>
+                    <input type="file"/>
+                    <button>保存</button>
+                    <button onclick="changePermission()">变更权限未开启</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-2.2.4.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script>
+    function changePermission(){
+        alert("123");
+    }
+</script>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>已发短信</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+</head>
+<body>
+<!--已发短信-->
+<div class="col-md-9" id="done-send">
+    <span>已发短信</span>
+    <div class="row">
+        <div class="col-md-2">发送日期：</div>
+        <div class="col-md-2">
+            <input type="text" class="form-control laydate-icon" id="hello"/>
+        </div>
+        <div class="col-md-2">
+            短信关键字：
+        </div>
+        <div class="col-md-2">
+            <input type="text" class="form-control"/>
+        </div>
+        <div class="col-md-4">
+            <button class="form-control">筛选</button>
+        </div>
+    </div>
+    <br/>
+    <table class="table table-bordered">
+        <tr>
+            <th>审核</th>
+            <th>审核状态</th>
+            <th>企业全称</th>
+            <th>申请报名联系人</th>
+            <th>申请时间</th>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">查看状态</button></td>
+            <td>待审核</td>
+            <td>苏州工业园区格网信息科技有限公司</td>
+            <td>丁浩13122870781</td>
+            <td>2016-06-02 15：45：25</td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">查看状态</button></td>
+            <td>已审核</td>
+            <td>苏州工业园区格网信息科技有限公司</td>
+            <td>丁浩13122870781</td>
+            <td>2016-06-02 15：45：25</td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">查看状态</button></td>
+            <td>待审核</td>
+            <td>苏州工业园区格网信息科技有限公司</td>
+            <td>丁浩13122870781</td>
+            <td>2016-06-02 15：45：25</td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">查看状态</button></td>
+            <td>待审核</td>
+            <td>苏州工业园区格网信息科技有限公司</td>
+            <td>丁浩13122870781</td>
+            <td>2016-06-02 15：45：25</td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">查看状态</button></td>
+            <td>待审核</td>
+            <td>苏州工业园区格网信息科技有限公司</td>
+            <td>丁浩13122870781</td>
+            <td>2016-06-02 15：45：25</td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">查看状态</button></td>
+            <td>待审核</td>
+            <td>苏州工业园区格网信息科技有限公司</td>
+            <td>丁浩13122870781</td>
+            <td>2016-06-02 15：45：25</td>
+        </tr>
+    </table>
+    <div style="text-align: center">
+        <span>记录：共18条 页次：2/2页 首页 上一页 下一页 尾页</span>
+    </div>
+    <!--已发短信模态框-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">已发短信</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>发送对象</th>
+                            <th>健身跑-男子组，运动员</th>
+                        </tr>
+                        <tr>
+                            <td>发送时间</td>
+                            <td>2016-02-18 10:23:25</td>
+                            <td>发送状态</td>
+                            <td>发送成功</td>
+                        </tr>
+                        <tr>
+                            <td>短信内容（81字）</td>
+                            <td>【外企运动会】健身跑项目将于5月22日早上9:00在XX地点举办，请注意提前到达现场，逾期不得参赛！正常参赛请回复数字1，不能按期参赛请回复2。如有疑问请致电65245183。【苏州市体育竞赛管理中心】</td>
+                        </tr>
+                        <tr>
+                            <th>回复人</th>
+                            <th>回复时间</th>
+                            <th>回复内容</th>
+                        </tr>
+                        <tr>
+                            <td>张三</td>
+                            <td>2016-02-18 10:23:25</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>张三</td>
+                            <td>2016-02-18 10:23:25</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>张三</td>
+                            <td>2016-02-18 10:23:25</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-2.2.4.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目确认</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <style>
+        body{
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+<span>项目确认</span>
+项目:
+<select>
+    <option>全部</option>
+    <option>保龄球</option>
+    <option>拔河</option>
+    <option>篮球</option>
+    <option>乒乓球</option>
+    <option>台球</option>
+    <option>游泳</option>
+    <option>羽毛球</option>
+    <option>足球</option>
+    <option>高尔夫球</option>
+    <option>扑克牌“80分”</option>
+    <option>围棋</option>
+    <option>攀岩</option>
+    <option>健身跑</option>
+</select>
+报名状态：
+<select>
+    <option>全部</option>
+    <option>人数正常</option>
+    <option>人数不足</option>
+    <option>人数超出</option>
+</select>
+项目状态:
+<select>
+    <option>全部</option>
+    <option>待确认</option>
+    <option>正常举行</option>
+    <option>取消举行</option>
+</select>
+<button>筛选</button>
+<table class="table">
+    <tr>
+        <th>操作</th>
+        <th>项目状态</th>
+        <th>项目</th>
+        <th>子项</th>
+        <th>限制队伍或者人数</th>
+        <th>报名队伍/人数</th>
+        <th>报名状态</th>
+    </tr>
+    <tr>
+        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">查看</button></td>
+        <td>待确认</td>
+        <td>篮球</td>
+        <td>男子组</td>
+        <td>4-8</td>
+        <td>18</td>
+        <td>人数不足</td>
+    </tr>
+    <tr>
+        <td><button>查看</button></td>
+        <td>待确认</td>
+        <td>篮球</td>
+        <td>男子组</td>
+        <td>4-8</td>
+        <td>18</td>
+        <td>人数不足</td>
+    </tr>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                信息处理！
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-2.2.4.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+</html>
