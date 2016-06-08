@@ -4,35 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>企业管理中心</title>
-    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
-    <style>
-        .myheading{
-            background-color: #333;
-        }
-        .foot{
-            padding-top: 20px;
-            padding-bottom: 20px;
-            margin-top: 50px;
-            color: #767676;
-            text-align: center;
-            border-top:1px solid #e5e5e5;
-        }
-        li{
-            list-style-type: none;
-            line-height: 40px;
-        }
-        .modify li{
-            line-height: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="../../css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/common/common.css"/>
 </head>
 <body>
-<div class="myheading">
+<div class="head">
     <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
                 <a href="#" class="navbar-brand">
-                    <img src="img/logo.png" alt="..." style="width: 75px;height: 30px;"/>
+                    <img class="head-img" src="../../img/logo.png"/>
                 </a>
             </div>
             <div class="collapse navbar-collapse">
@@ -52,7 +33,7 @@
                     </li>
                 </ul>
                 <button type="button" class="btn btn-default navbar-btn navbar-right">退出</button>
-                <form action=""class="navbar-form navbar-right" role="search">
+                <form action="" class="navbar-form navbar-right" role="search">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="请输入搜索内容"/>
                     </div>
@@ -63,7 +44,8 @@
     </nav>
 </div>
 <div style="text-align: center">
-    <p><h3>外企运动会--企业管理中心</h3></p>
+    <h3 style="font-family: Courier">苏州市外企运动会-企业中心</h3>
+    <hr/>
 </div>
 <div class="mybody container" style="margin-top: 50px">
     <div class="row">
@@ -78,14 +60,13 @@
         <div class="col-md-9">
             <iframe id="iframeId" src="bmxz.html"  frameborder="0" style="width: 100%;height: 700px;"></iframe>
         </div>
-
     </div>
     <div class="foot">
         <p>苏州市体育竞赛管理中心（苏州市社会体育管理中心）   版权所有(C)    本站内容未经许可不得转载</p>
     </div>
 </div>
-<script src="../../js/jquery-2.2.4.min.js"></script>
-<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/lib/jquery-2.2.4.min.js"></script>
+<script src="../../js/lib/bootstrap.min.js"></script>
 <script>
     function change(str){
         if(str=="modify"){

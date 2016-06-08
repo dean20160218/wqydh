@@ -1,0 +1,22 @@
+.head{
+    background-color: #333;
+}
+.head-img{
+    width: 75px;
+    height: 30px;
+}
+.foot{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    color: #767676;
+    text-align: center;
+    border-top:1px solid #e5e5e5;
+}
+li{
+    list-style-type: none;
+    line-height: 40px;
+}
+.modify li{
+    line-height: 40px;
+}
