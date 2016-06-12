@@ -1,0 +1,55 @@
+.main-container{
+    margin:-10px auto 0 auto;
+    height: 800px;
+}
+.btn-sub{
+    width: 100%;
+}
+@media screen and (min-width: 1000px) {
+    .main-container {
+        width: 55%;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+    .main-container {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .main-container,{
+        width: 100%;
+    }
+}
+li{
+    list-style-type: none;
+    line-height: 37px;
+    vertical-align: middle;
+}
+span{
+    text-align: center;
+    line-height: 100%;
+}
+.foot{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    color: #767676;
+    text-align: center;
+    border-top:1px solid #e5e5e5;
+}
+.qyzc-head{
+    background-image: url('../../img/login_bg.png');
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.sub-title{
+    text-align: center;
+}
+.sub-title span{
+    font-size: 20px;
+    line-height: 50px;
+}
+.show-red{
+    color: red;
+}

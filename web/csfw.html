@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+
+</body>
+<script src="../js/lib/jquery-2.2.4.min.js"></script>
+<script>
+    $.ajax({
+        url:"http://zanlaoli.vicp.cc:16446/check_existence",
+        data:{"full_name":"苏州工业园区格网信息科技有限公司"},
+        type:"GET",
+        success: function (data) {
+            console.log(data);
+        }
+    })
+
+
+
+
+
+
+
+</script>
+</html>

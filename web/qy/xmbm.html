@@ -4,17 +4,140 @@
     <meta charset="UTF-8">
     <title>项目报名</title>
     <link rel="stylesheet" href="../../css/lib/bootstrap.min.css"/>
+    <style>
+        .aId{
+            width: 75px;height: 30px;display: block;overflow: hidden;position: relative;
+        }
+        .inputId{
+           position: absolute;
+        }
+    </style>
 </head>
 <body>
-<div id="sign" class="content col-md-9">
-    <ol class="breadcrumb">
-        <li><a href="#">项目修改</a></li>
-    </ol>
-    <div class="table-responsive row">
-        <div class=" col-md-12 sign row" style="margin-top: 50px;">
-            <div class="col-md-6"><button class="form-control btn-primary">下载报名表（模板）</button></div>
-            <div class="col-md-6"><button class="form-control btn-primary">上传报名表</button></div>
-        </div>
+<div id="sign" class="content col-md-10">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">项目报名</a></li>
+        </ol>
+        <table class="table">
+            <tr>
+                <th>项目小项</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>国籍</th>
+                <th>联系手机</th>
+                <th>证件号码</th>
+                <th>社保/公积金编号</th>
+                <th>劳务工上传合同</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" value="男子单打" style="width: 80px"/>
+                </td>
+                <td>
+                    <input type="text" value="王小虎" style="width: 60px"/>
+                </td>
+                <td>
+                    <select>
+                        <option>男</option>
+                        <option>女</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" value="毛里求斯" style="width: 80px"/>
+                </td>
+                <td>
+                    <input type="text" value="13122870781" style="width: 100px"/>
+                </td>
+                <td>
+                    <input type="text" value="320565459626326523" style="width: 160px"/>
+                </td>
+                <td>
+                    <input type="text" value="123456"  style="width: 80px"/>
+                </td>
+                <td>
+                    <a class="aId" href="#">
+                        <input type="file" class="inputId" value="上传劳务合同"/>
+                    </a>
+                </td>
+                <td>
+                    <button>删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" value="男子单打" style="width: 80px"/>
+                </td>
+                <td>
+                    <input type="text" value="王小虎" style="width: 60px"/>
+                </td>
+                <td>
+                    <select>
+                        <option>男</option>
+                        <option>女</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" value="毛里求斯" style="width: 80px"/>
+                </td>
+                <td>
+                    <input type="text" value="13122870781" style="width: 100px"/>
+                </td>
+                <td>
+                    <input type="text" value="320565459626326523" style="width: 160px"/>
+                </td>
+                <td>
+                    <input type="text" value="123456"  style="width: 80px"/>
+                </td>
+                <td>
+                    <a class="aId" href="#">
+                        <input type="file" class="inputId" value="上传劳务合同"/>
+                    </a>
+                </td>
+                <td>
+                    <button>删除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" value="男子单打" style="width: 80px"/>
+                </td>
+                <td>
+                    <input type="text" value="王小虎" style="width: 60px"/>
+                </td>
+                <td>
+                    <select>
+                        <option>男</option>
+                        <option>女</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" value="毛里求斯" style="width: 80px"/>
+                </td>
+                <td>
+                    <input type="text" value="13122870781" style="width: 100px"/>
+                </td>
+                <td>
+                    <input type="text" value="320565459626326523" style="width: 160px"/>
+                </td>
+                <td>
+                    <input type="text" value="123456"  style="width: 80px"/>
+                </td>
+                <td>
+                    <a class="aId" href="#">
+                        <input type="file" class="inputId" value="上传劳务合同"/>
+                    </a>
+                </td>
+                <td>
+                    <button>删除</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <button>添加运动员</button>
+        <button>确认报名</button>
     </div>
 </div>
 </body>

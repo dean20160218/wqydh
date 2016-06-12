@@ -5,69 +5,38 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>企业</title>
     <link rel="stylesheet" href="../../css/lib/bootstrap.min.css"/>
-    <style>
-        .main-container{
-            margin:20px auto;
-            height: 800px;
-        }
-        .btn-sub{
-            width: 100%;
-        }
-        @media screen and (min-width: 1000px) {
-            .main-container {
-                width: 55%;
-            }
-        }
-        @media screen and (min-width: 1000px) and (max-width: 1300px) {
-            .main-container {
-                width: 80%;
-            }
-        }
-        @media screen and (max-width: 1000px) {
-            .main-container,{
-                width: 100%;
-            }
-        }
-        li{
-            list-style-type: none;
-            line-height: 37px;
-            vertical-align: middle;
-        }
-        span{
-            text-align: center;
-            line-height: 100%;
-        }
-        .foot{
-            padding-top: 20px;
-            padding-bottom: 20px;
-            margin-top: 50px;
-            color: #767676;
-            text-align: center;
-            border-top:1px solid #e5e5e5;
-        }
-    </style>
+    <link rel="stylesheet" href="../../css/qy/qyzc.css"/>
 </head>
 <body>
 <div class="main-container">
-    <p><h3 style="text-align: center;">企业注册</h3></p>
-    <br/>
-    <form action="">
+    <form>
         <ul>
+            <li>
+               <div class="qyzc-head">
+                   <img src="../../img/logo.png" alt=""/>
+                   <p>外企运动会企业报名系统</p>
+               </div>
+            </li>
+            <li>
+                <div class="sub-title">
+                    <span>注册</span>
+                </div>
+            </li>
             <li class="row">
-                <div class="col-md-2"><span>企业全称</span><span style="color: red">*</span></div>
+                <div class="col-md-2"><span>企业全称</span><span class="show-red">*</span></div>
                 <div class="col-md-8">
                     <input type="text" class="form-control"/>
                 </div>
                 <div class="col-md-2">
-                    <button type="button" class="form-control btn-success">验证</button>
+                    <button type="button" class="form-control btn-primary" id="btn-check-company">验证</button>
                 </div>
             </li>
             <li class="row">
-                <div class="col-md-2"><span>企业简称（至多6位）</span><span style="color: red">*</span></div>
+                <div class="col-md-2"><span>企业简称（至多6位）</span><span class="show-red">*</span></div>
                 <div class="col-md-8"> <input type="text" class="form-control"/></div>
             </li>
             <li class="row">
-                <div class="col-md-2"><span>注册所在地</span><span style="color: red">*</span></div>
+                <div class="col-md-2"><span>注册所在地</span><span class="show-red">*</span></div>
                 <div class="col-md-8">
                     <select class="form-control">
                         <option value="">姑苏区</option>
@@ -84,7 +53,7 @@
                 </div>
             </li>
             <li class="row">
-                <div class="col-md-2"><span>通讯地址</span><span style="color: red">*</span></div>
+                <div class="col-md-2"><span>通讯地址</span><span class="show-red">*</span></div>
                 <div class="col-md-8">
                     <select class="form-control">
                         <option value="">姑苏区</option>
@@ -102,28 +71,28 @@
                 </div>
             </li>
             <li class="row">
-                <div class="col-md-2"><span>登录密码(至少6位)</span><span style="color: red">*</span></div>
+                <div class="col-md-2"><span>登录密码(至少6位)</span><span class="show-red">*</span></div>
                 <div class="col-md-8"><input type="password" class="form-control"/></div>
             </li>
             <li class="row">
-                <div class="col-md-2"><span>确认密码</span><span style="color: red">*</span></div>
+                <div class="col-md-2"><span>确认密码</span><span class="show-red">*</span></div>
                 <div class="col-md-8"><input type="password" class="form-control"/></div>
             </li>
             <li class="row">
-                <div class="col-md-2"><span>报名联系人</span><span style="color: red">*</span></div>
+                <div class="col-md-2"><span>报名联系人</span><span class="show-red">*</span></div>
                 <div class="col-md-8"><input type="text" class="form-control"/></div>
             </li>
             <li class="row">
-                <div class="col-md-2"><span>手机号码</span><span style="color: red">*</span></div>
+                <div class="col-md-2"><span>手机号码</span><span class="show-red">*</span></div>
                 <div class="col-md-8">
                     <input type="text" class="form-control"/>
                 </div>
                 <div class="col-md-2">
-                    <button type="button" class="form-control btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">验证</button>
+                    <button type="button" class="form-control btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">验证</button>
                 </div>
             </li>
             <li class="row">
-                <div class="col-md-2"><span>电子邮箱</span><span style="color: red">*</span></div>
+                <div class="col-md-2"><span>电子邮箱</span><span class="show-red">*</span></div>
                 <div class="col-md-8"><input type="email" class="form-control"/></div>
             </li>
             <li class="row">
@@ -141,15 +110,31 @@
             <li class="row">
                 <div class="col-md-2"><span>投资国别</span></div>
                 <div class="col-md-8">
-                    <select class="form-control">
-                        <option>中国</option>
-                        <option>美国</option>
-                        <option>英国</option>
-                        <option>法国</option>
-                        <option>德国</option>
-                        <option>越南</option>
-                        <option>俄罗斯</option>
-                    </select>
+                    <input type="text" class="form-control"/>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="form-control btn-primary" data-toggle="modal" data-target="#modal-country" data-whatever="@mdo">选择国家</button>
+                </div>
+
+                <div class="modal fade" id="modal-country" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="modal-country-label">请选择国家</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div id="city" class="row" style="margin: 15px">
+                                    <select class="prov col-md-4"></select>
+                                    <select class="city col-md-4" disabled="disabled"></select>
+                                    <select class="dist col-md-4" disabled="disabled"></select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">确定</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </li>
             <li class="row">
@@ -165,9 +150,9 @@
             <li class="row">
                 <br/>
                 <div class="col-md-2"></div>
-                <div class="col-md-8"><button class="btn-sub btn-success form-control" id="btn-submit" style="width: 100%">确定注册</button></div>
+                <div class="col-md-8"><button class="btn-sub btn-primary form-control" id="btn-submit">确定注册</button></div>
             </li>
-            <h4 style="text-align: left">其中加<span style="color: red">*</span>为必填</h4>
+            <h4>其中加<span class="show-red">*</span>为必填</h4>
         </ul>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
             <div class="modal-dialog" role="document">
@@ -199,33 +184,326 @@
 </body>
 <script src="../../js/lib/jquery-2.2.4.min.js"></script>
 <script src="../../js/lib/bootstrap.min.js"></script>
+<script src="../../js/common/geoneCommon.js"></script>
+<script src="../../js/lib/citySelect.js"></script>
+<!--<script src="../../js/lib/require.js"></script>-->
+<!--<script src="../../js/common/urlConfig.js"></script>-->
+<script src="../../js/qy/qyzc.js" charset="UTF-8"></script>
 <script>
-    $("#btn-submit").click(function(){
-        $.ajax({
-            url:'http://61.174.40.245:16446/company_signup',
-            type:'post',
-            data:{
-                'full_name':'园区测绘公司',
-                'short_name':'测绘',
-                'register_address':'苏虹中路101号',
-                'address':'尼玛路888号',
-                'password':'145632',
-                'contact_person':'王小虎',
-                'phone_number':'13122870781',
-                'email':'8888@88.com',
-                'bussiness_register_mark':'',
-                'landline_number':'55688',
-                'fax_number':'05128888888',
-                'invest_country':'毛里求斯',
-                'staff_count':'13'
+   /* $("#city").citySelect({
+        url:{"citylist":[
+            {"p":"亚洲","c":[
+                {"n":"东亚","a":[
+                    {"s":"中国"},
+                    {"s":"蒙古"},
+                    {"s":"朝鲜"},
+                    {"s":"韩国"},
+                    {"s":"日本"},
+                ]
+                },
+                {"n":"东南亚","a":[
+                    {"s":"菲律宾"},
+                    {"s":"越南"},
+                    {"s":"老挝"},
+                    {"s":"柬埔寨"},
+                    {"s":"缅甸"},
+                    {"s":"泰国"},
+                    {"s":"马来西亚"},
+                    {"s":"文莱"},
+                    {"s":"新加坡"},
+                    {"s":"印度尼西亚"},
+                    {"s":"东帝汶"}
+                ]
+                },
+                {"n":"南亚","a":[
+                    {"s":"尼珀尔"},
+                    {"s":"不丹"},
+                    {"s":"孟加拉国"},
+                    {"s":"印度"},
+                    {"s":"巴基斯坦"},
+                    {"s":"斯里兰卡"},
+                    {"s":"马尔代夫"}
+                ]
+                },
+                {"n":"中亚","a":[
+                    {"s":"哈沙克斯坦"},
+                    {"s":"吉尔吉斯斯坦"},
+                    {"s":"塔吉克斯坦"},
+                    {"s":"乌兹别克斯坦"},
+                    {"s":"图尔曼斯坦"}
+                ]
+                },
+                {"n":"西亚","a":[
+                    {"s":"阿富汗"},
+                    {"s":"伊拉克"},
+                    {"s":"伊朗"},
+                    {"s":"叙利亚"},
+                    {"s":"约旦"},
+                    {"s":"黎巴嫩"},
+                    {"s":"以色列"},
+                    {"s":"巴勒斯坦"},
+                    {"s":"沙特阿拉伯"},
+                    {"s":"巴林"},
+                    {"s":"卡塔尔"},
+                    {"s":"科威特"},
+                    {"s":"阿拉伯联合酋长国（阿联酋）"},
+                    {"s":"阿曼"},
+                    {"s":"也门"},
+                    {"s":"格鲁吉亚"},
+                    {"s":"亚美尼亚"},
+                    {"s":"阿塞拜疆"},
+                    {"s":"土耳其"},
+                    {"s":"塞浦路斯"}
+                ]}
+            ]
             },
-            success:function(data){
-                alert(data);
+            {"p":"欧洲","c":[
+                {"n":"北欧","a":[
+                    {"s":"芬兰"},
+                    {"s":"瑞典"},
+                    {"s":"挪威"},
+                    {"s":"冰岛"},
+                    {"s":"丹麦"},
+                    {"s":"法罗群岛"}
+                ]
+                },
+                {"n":"东欧","a":[
+                    {"s":"爱沙尼亚"},
+                    {"s":"拉脱维亚"},
+                    {"s":"立陶宛"},
+                    {"s":"白俄罗斯"},
+                    {"s":"俄罗斯"},
+                    {"s":"乌克兰"},
+                    {"s":"摩尔多瓦"}
+                ]
+                },
+                {"n":"中欧","a":[
+                    {"s":"波兰"},
+                    {"s":"捷克"},
+                    {"s":"斯洛伐克"},
+                    {"s":"印度"},
+                    {"s":"匈牙利"},
+                    {"s":"德国"},
+                    {"s":"奥地利"},
+                    {"s":"瑞士"},
+                    {"s":"列支敦士登"}
+                ]
+                },
+                {"n":"西欧","a":[
+                    {"s":"英国"},
+                    {"s":"爱尔兰"},
+                    {"s":"荷兰"},
+                    {"s":"比利时"},
+                    {"s":"卢森堡"},
+                    {"s":"法国"},
+                    {"s":"摩纳哥"}
+                ]
+                },
+                {"n":"南欧","a":[
+                    {"s":"罗马尼亚"},
+                    {"s":"保加利亚"},
+                    {"s":"塞尔维亚"},
+                    {"s":"马其顿"},
+                    {"s":"阿尔巴尼亚"},
+                    {"s":"希腊"},
+                    {"s":"斯洛文尼亚"},
+                    {"s":"克罗地亚"},
+                    {"s":"波斯尼亚"},
+                    {"s":"墨塞哥维那"},
+                    {"s":"意大利"},
+                    {"s":"梵蒂冈"},
+                    {"s":"圣马力诺"},
+                    {"s":"马耳他"},
+                    {"s":"西班牙"},
+                    {"s":"葡萄牙"},
+                    {"s":"安道尔"}
+                ]}
+            ]
             },
-            error:function(){
-                alert("error");
+            {"p":"非洲","c":[
+                {"n":"北非","a":[
+                    {"s":"埃及"},
+                    {"s":"利比亚"},
+                    {"s":"苏丹"},
+                    {"s":"突尼斯"},
+                    {"s":"阿尔及利亚"},
+                    {"s":"摩洛哥"},
+                    {"s":"亚速尔群岛"},
+                    {"s":"马德拉群岛"}
+                ]
+                },
+                {"n":"东非","a":[
+                    {"s":"埃塞俄比亚"},
+                    {"s":"厄立特里亚"},
+                    {"s":"索马里"},
+                    {"s":"吉布提"},
+                    {"s":"肯尼亚"},
+                    {"s":"坦桑尼亚"},
+                    {"s":"乌干达"},
+                    {"s":"卢旺达"},
+                    {"s":"布隆迪"},
+                    {"s":"塞舌尔"}
+                ]
+                },
+                {"n":"中非","a":[
+                    {"s":"乍得"},
+                    {"s":"中非"},
+                    {"s":"喀麦隆"},
+                    {"s":"赤道几内亚"},
+                    {"s":"加蓬"},
+                    {"s":"刚果共和国"},
+                    {"s":"刚果民主共和国"},
+                    {"s":"圣多美吉普林西比"}
+                ]
+                },
+                {"n":"西非","a":[
+                    {"s":"毛里塔尼亚"},
+                    {"s":"西沙哈拉"},
+                    {"s":"塞内加尔"},
+                    {"s":"冈比亚"},
+                    {"s":"马里"},
+                    {"s":"布基纳法索"},
+                    {"s":"几内亚"},
+                    {"s":"几内亚比绍"},
+                    {"s":"佛得角"},
+                    {"s":"塞拉利昂"},
+                    {"s":"利比里亚"},
+                    {"s":"科特迪瓦"},
+                    {"s":"加纳"},
+                    {"s":"多哥"},
+                    {"s":"贝宁"},
+                    {"s":"尼日尔"},
+                    {"s":"加那利群岛"}
+                ]
+                },
+                {"n":"南非","a":[
+                    {"s":"赞比亚"},
+                    {"s":"安哥拉"},
+                    {"s":"津巴布韦"},
+                    {"s":"马拉维"},
+                    {"s":"莫桑比克"},
+                    {"s":"博茨瓦纳"},
+                    {"s":"纳米比亚"},
+                    {"s":"南非"},
+                    {"s":"斯威士兰"},
+                    {"s":"莱索托"},
+                    {"s":"马达加斯加"},
+                    {"s":"科摩罗"},
+                    {"s":"毛里求斯"},
+                    {"s":"留尼旺"},
+                    {"s":"圣赫勒拿"}
+                ]}
+            ]
+            },
+            {"p":"大洋洲","c":[
+                {"n":"澳大利亚"},
+                {"n":"新西兰"},
+                {"n":"巴布亚新几内亚"},
+                {"n":"所罗门群岛"},
+                {"n":"瓦努阿图"},
+                {"n":"密克罗尼西亚"},
+                {"n":"马绍尔群岛"},
+                {"n":"帕劳"},
+                {"n":"瑙鲁"},
+                {"n":"基里巴斯"},
+                {"n":"图瓦罗"},
+                {"n":"萨摩亚"},
+                {"n":"斐济群岛"},
+                {"n":"汤加"},
+                {"n":"库克群岛"},
+                {"n":"关岛"},
+                {"n":"新喀里多尼亚"},
+                {"n":"法属波利尼西亚"},
+                {"n":"皮特凯恩岛"},
+                {"n":"瓦利斯与富图纳"},
+                {"n":"纽埃"},
+                {"n":"托克斯"},
+                {"n":"美属萨摩亚"},
+                {"n":"北马里亚纳"}
+            ]
+            },
+            {"p":"北美洲","c":[
+                {"n":"北美","a":[
+                    {"s":"加拿大"},
+                    {"s":"美国"},
+                    {"s":"墨西哥"},
+                    {"s":"格陵兰"}
+                ]
+                },
+                {"n":"中美洲","a":[
+                    {"s":"危地马拉"},
+                    {"s":"伯利兹"},
+                    {"s":"萨尔瓦多"},
+                    {"s":"洪都拉斯"},
+                    {"s":"尼加拉瓜"},
+                    {"s":"哥斯达黎加"},
+                    {"s":"巴拿马"}
+                ]
+                },
+                {"n":"加勒比海地区","a":[
+                    {"s":"巴哈马"},
+                    {"s":"古巴"},
+                    {"s":"牙买加"},
+                    {"s":"海地"},
+                    {"s":"多米尼加共和国"},
+                    {"s":"安提瓜和巴布达"},
+                    {"s":"圣基茨和尼维斯"},
+                    {"s":"多米尼克"},
+                    {"s":"圣卢西亚"},
+                    {"s":"圣文森特和格林纳丁斯"},
+                    {"s":"格林纳达"},
+                    {"s":"巴巴多斯"},
+                    {"s":"特立尼达和多巴哥"},
+                    {"s":"波多黎各"},
+                    {"s":"英属维尔金群岛"},
+                    {"s":"美属维尔金群岛"},
+                    {"s":"安圭拉"},
+                    {"s":"蒙特塞拉特"},
+                    {"s":"瓜德罗普"},
+                    {"s":"马提尼克"},
+                    {"s":"荷属安的列斯"},
+                    {"s":"阿鲁巴"},
+                    {"s":"特克斯和凯科斯群岛"},
+                    {"s":"开曼群岛"},
+                    {"s":"百慕大"},
+                ]
+                }
+            ]
+            },
+            {"p":"南美洲","c":[
+                {"n":"北部","a":[
+                    {"s":"哥伦比亚"},
+                    {"s":"委内瑞拉"},
+                    {"s":"圭亚那"},
+                    {"s":"法属圭亚那"},
+                    {"s":"苏里南"}
+                ]
+                },
+                {"n":"中西部","a":[
+                    {"s":"厄尔多瓜"},
+                    {"s":"秘鲁"},
+                    {"s":"玻利维亚"}
+                ]
+                },
+                {"n":"东部","a":[
+                    {"s":"巴西"}
+                ]
+                },
+                {"n":"南部","a":[
+                    {"s":"智利"},
+                    {"s":"阿根廷"},
+                    {"s":"乌拉圭"},
+                    {"s":"巴拉圭"}
+                ]
+                }
+            ]
             }
-        })
-    })
+        ]
+        },
+        prov:"",
+        city:"",
+        dist:"",
+        nodata:"none"
+    });*/
 </script>
 </html>

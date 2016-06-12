@@ -1,0 +1,44 @@
+.main-container{
+    margin:10px auto;
+    height: 800px;
+}
+@media screen and (min-width: 1000px) {
+    .main-container {
+        width: 55%;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+    .main-container {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .main-container,{
+        width: 100%;
+    }
+}
+li{
+    list-style-type: none;
+    line-height: 37px;
+    vertical-align: middle;
+}
+span{
+    text-align: center;
+    line-height: 100%;
+}
+#Lb_Random{
+    font-size: 20px;
+    margin-top: 500px;
+}
+#random-div{
+    background: url("../../img/back.jpg");
+    width: 120px;
+}
+.myfooter{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    color: #767676;
+    text-align: center;
+    border-top:1px solid #e5e5e5;
+}
